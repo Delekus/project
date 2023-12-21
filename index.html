@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link type="image/x-icon" href="img/icons/favicon.svg" rel="shortcut icon">
+	<link type="Image/x-icon" href="img/icons/favicon.svg" rel="icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!--Подключение шрифтов Comfortaa weight 700 и Montserrat weight 400,500, 600-->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@400;500;600;800&display=swap"
+		rel="stylesheet">
+	<title>Хорошие ремонты</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="container header">
+				<div class="header__logo">
+					<a href="/">
+						<img src="img/header_logo.svg" alt="Логотип">
+					</a>
+				</div>
+				<nav class="header__menu">
+					<ul>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="/price">Цены</a></li>
+						<li><a href="/our-works">Наши работы</a></li>
+						<li><a href="/about-company">О компании</a></li>
+						<li><a href="/blog">Блог</a></li>
+						<li><a href="/contacts">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header__info">
+					<div class="info__city">
+						<select class="city" name="city" id="id-city">
+							<option value="SP">Санкт-Петербург</option>
+							<option value="M">Москва</option>
+							<option value="O">Омск</option>
+						</select>
+					</div>
+					<div class="info__tel">
+						<a href="#">
+							<span>+7 (985) 123-456-78</span>
+						</a>
+					</div>
+					<div class="sign-in">
+						<a href="#">
+							<img src="img/header_icon-account.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<div class="block__banners">
+					<div class="banners__item banners__text">
+						<h3>Качественный ремонт квартир в Москве и МО</h3>
+						<p>Бесплатный выезд замерщика в день обращения!</p>
+						<p>Начинаем ремонт в течении 3 дней!</p>
+						<a class="link__sign" href="#">Записаться на замер</a>
+					</div>
+					<div class="banners__item banners__square_horizontal">
+						<p>Предоставляем фиксированную скидку на все отделочные работы</p>
+						<a class="link__more-percent" href="#">Подробнее</a>
+						<span>-30%</span>
+					</div>
+					<div class="banners__item banners__square_left">
+						<h3>При заказе капитального ремонта</h3>
+						<p>Дизайн проекта в подарок</p>
+					</div>
+					<div class="banners__item banners__square_right">
+						<h3>Отделка под ключ</h3>
+						<p>-10%</p>
+					</div>
+				</div>
+				<div class="block__out-projects">
+					<div class="slide-block__line-text">
+						<h2 class="block__title">Наши проекты</h2>
+						<div class="wrapper__achievement"><span>12</span>
+							<p>лет работы, гарантия<br> на все виды услуг</p>
+						</div>
+						<div class="wrapper__achievement"><span>3 589</span>
+							<p>отремонированных<br> помещений</p>
+						</div>
+					</div>
+					<div class="slide-block">
+						<div class="slide__item big-slide">
+							<div class="circle">
+								<p>2 комн. <br><span>90 м&sup2;</p></span>
+							</div>
+							<div class="slide__selector">
+								<ul class="selector__list">
+									<li class="list__item"></li>
+									<li class="list__item list__item_active-green"></li>
+									<li class="list__item"></li>
+									<li class="list__item"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide__item small-slide">
+							<div class="circle">
+								<p>2 комн. <br><span>90 м&sup2;</p></span>
+							</div>
+							<div class="slide__selector">
+								<ul class="selector__list">
+									<li class="list__item"></li>
+									<li class="list__item list__item_active-green"></li>
+									<li class="list__item"></li>
+									<li class="list__item"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide__item medium-slide">
+							<div class="circle circle_blue">
+								<p>1 комн. <br><span>60 м&sup2;</p></span>
+							</div>
+							<div class="slide__selector">
+								<ul class="selector__list">
+									<li class="list__item"></li>
+									<li class="list__item"></li>
+									<li class="list__item list__item_active-blue"></li>
+									<li class="list__item"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<button class="btn__look-more">
+						Посмотреть еще 6 проектов
+					</button>
+				</div>
+
+				<div class="block__offer">
+					<div class="offer__title">
+						<div class="title__text">
+							<h2 class="block__title">Мы предлагаем</h2>
+							<p><span>Бесплатный выезд замерщика</span> в день обращения! Начинаем ремонт в течении 3 дней!</p>
+						</div>
+						<div class="title__images">
+							<div class="ellipse"><img src="img/main/title-ellipse-1.svg" alt=""></div>
+							<div class="ellipse"><img src="img/main/title-ellipse-2.svg" alt=""></div>
+							<div class="ellipse"><img src="img/main/title-ellipse-3.svg" alt=""></div>
+							<div class="ellipse"><img src="img/main/title-ellipse-4.svg" alt=""></div>
+						</div>
+					</div>
+					<div class="offer__pics">
+						<div class="pics__item pics__item-1">
+							<h3 class="item__title">Капитальный ремонт</h3>
+							<p class="item__text">Капитальный ремонт включает в себя отделочные работ с использованием самых новейших
+								материалов</p>
+							<a class="item__link" href="#"><img src="img/icons/index-right.svg" alt=""></a>
+						</div>
+						<div class="pics__item pics__item-2">
+							<h3 class="item__title">Косметический ремонт</h3>
+							<a class="item__link" href="#"><img src="img/icons/index-right.svg" alt=""></a>
+						</div>
+						<div class="pics__item pics__item-3">
+							<h3 class="item__title">Евро ремонт</h3>
+							<a class="item__link" href="#"><img src="img/icons/index-right.svg" alt=""></a>
+						</div>
+						<div class="pics__item pics__item-4">
+							<h3 class="item__title">Дизайн интерьера</h3>
+							<p class="item__text">Капитальный ремонт включает в себя отделочные работ с использованием самых новейших
+								материалов</p>
+							<a class="item__link" href="#"><img src="img/icons/index-right.svg" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="block__calculation">
+					<div class="calculation__head">
+						<h2 class="block__title">Рассчитайте стоимость ремонта для Вашего пощения за <span>2 минуты с помощью
+								простого калькулятора</span></h2>
+						<p class="subtitle">Укажите сведения об объекте и выберите тип ремонта, чтобы моментально получить
+							предварительный расчет по стоимости со скидкой</p>
+						<div class="range__container">
+							<label for="rangeItem">20 м&sup2;</label>
+							<input class="range__area" type="range" min="20" max="200" step="10"
+								onchange="document.getElementById('rangeValue').innerHTML = this.value;" list="rangeList"
+								id="rangeItem">
+							<label for="rangeItem" id="rangeValue">110</label>
+							<datalist id="rangeList">
+								<option value="20" label="20">
+								<option value="30" label="30">
+								<option value="40" label="40">
+								<option value="50" label="50">
+								<option value="60" label="60">
+								<option value="70" label="70">
+								<option value="80" label="80">
+								<option value="90" label="90">
+								<option value="100" label="100">
+								<option value="110" label="110">
+								<option value="120" label="120">
+								<option value="130" label="130">
+								<option value="140" label="140">
+								<option value="150" label="150">
+								<option value="160" label="160">
+								<option value="170" label="170">
+								<option value="180" label="180">
+								<option value="190" label="190">
+								<option value="200" label="200">
+							</datalist>
+						</div>
+					</div>
+					<div class="calculation__cards">
+						<div class="cards__item cards__item-1">
+							<p>Новостройка</p>
+							<a href="#">от 6 900 руб./м&sup2;</a>
+						</div>
+						<div class="cards__item cards__item-2">
+							<p>Вторичное жилье</p>
+							<a href="#">от 6 900 руб./м&sup2;</a>
+						</div>
+						<div class="cards__item cards__item-3">
+							<p>Дом</p>
+							<a href="#">от 6 900 руб./м&sup2;</a>
+						</div>
+						<div class="cards__item cards__item-4">
+							<p>Таунхаус</p>
+							<a href="#">от 6 900 руб./м&sup2;</a>
+						</div>
+					</div>
+					<div class="calculation__selecting">
+						<div class="selecting__tabs">
+							<input class="tabs__input tab__input-1" type="radio" name="tabs" id="tab-1" checked>
+							<input class="tabs__input tab__input-2" type="radio" name="tabs" id="tab-2">
+							<input class="tabs__input tab__input-3" type="radio" name="tabs" id="tab-3">
+							<label class="tabs__name tab__name-1" for="tab-1">Капитальный ремонт <br> от 6 900 руб/м&sup2;</label>
+							<label class="tabs__name tab__name-2" for="tab-2">Косметический ремонт <br> от 7 700 руб/м&sup2;</label>
+							<label class="tabs__name tab__name-3" for="tab-3">Евро ремонт <br> от 8 600 руб/м&sup2;</label>
+
+							<div class="tabs__content tab__content-1">От правильности и беспристрастности оценки первоначального
+								состояния зависит дальнейшая стратегия действий, смета и окончательный результат. Если вы сомневаетесь в
+								своих возможностях, доверьте это профессионалам. При кап. работах желательно предусмотреть и просчитать
+								срок службы коммуникаций, чтобы не переделывать все несколько раз.
+								<a class="link__more" href="#">Подробнее <img src="/img/icons/arrow-blue-right.svg" alt=""></a>
+							</div>
+							<div class="tabs__content tab__content-2">Косметический ремонт предполагает отсутствие изменений в
+								системах инженерных коммуникаций, сантехнике, планировке помещений. Обычно акцент ставится на работах по
+								отделке, направленных на получение необходимого владельцу дизайна. Цель — изменение внешнего вида
+								покрытий: стен, потолка, пола. Применяются т.н. «косметические» строительные средства: обои, ламинат,
+								краска, плитка. В отдельных случаях заменяется старый штукатурный слой, создаются навесные потолки.
+								<a class="link__more" href="#">Подробнее <img src="/img/icons/arrow-blue-right.svg" alt=""></a>
+							</div>
+							<div class="tabs__content tab__content-3">Евроремонт – это не стиль оформления жилого помещения, а точное
+								соответствие ремонтных работ европейским нормам. Строительные стандарты в Европе четко регулируют и
+								безопасность строительных материалов, и технологии монтажа, и стандарты планировки помещений.
+								Разумеется, стандарты евроремонта постоянно меняются. На смену старым отделочным материалам приходят
+								новые. И все они обязательно должны проходить проверку на соответствие нормам экологичности и
+								безопасности для жизни человека. Сегодня сертификаты соответствия европейским стандартам можно получить
+								и за пределами Европы, поэтому сейчас недорогой евроремонт квартир часто делают и стройматериалами
+								отечественного производства.
+								<a class="link__more" href="#">Подробнее <img src="/img/icons/arrow-blue-right.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="selecting__price">
+							<h4>Предварительный расчет</h4>
+							<p>Цены за услуги <span>25 000 руб</span></p>
+							<p>Цены за материалы <span>15 000 руб</span></p>
+							<p class="price__total">Итого <span>40 000 руб</span></p>
+							<a class="link__sign" href="#">Записаться на замер</a>
+						</div>
+					</div>
+				</div>
+				<div class="benefits">
+					<h2 class="block__title">Почему клиенты выбирают нас</h2>
+					<p class="subtitle">Мы не привлекаем к выполнению работ третьих лиц, и людей без опыта работы</p>
+					<div class="benefits__cards">
+						<div class="benefit-cards__item benefit-card__item-1">
+							<img class="card__image" src="img/main/bgc-benefit-image-1.svg" alt="">
+							<p class="card__title">Ремонт от А до Я</p>
+							<p class="card__subtitle">Косметический ремонт квартир обычно включает в себя: окрашивание потолков,
+								поклейка обоев на стены</p>
+						</div>
+						<div class="benefit-cards__item benefit-card__item-2">
+							<img class="card__image" src="img/main/bgc-benefit-image-2.svg" alt="">
+							<p class="card__title">Лидер независимых рейтингов</p>
+							<p class="card__subtitle">Косметический ремонт квартир обычно включает в себя: окрашивание потолков,
+								поклейка обоев на стены</p>
+						</div>
+						<div class="benefit-cards__item benefit-card__item-3">
+							<img class="card__image" src="img/main/bgc-benefit-image-3.svg" alt="">
+							<p class="card__title">По договору точно в срок</p>
+							<p class="card__subtitle">Косметический ремонт квартир обычно включает в себя: окрашивание потолков,
+								поклейка обоев на стены</p>
+						</div>
+						<div class="benefit-cards__item benefit-card__item-4">
+							<img class="card__image" src="img/main/bgc-benefit-image-4.svg" alt="">
+							<p class="card__title">Поэтапная оплата</p>
+							<p class="card__subtitle">Косметический ремонт квартир обычно включает в себя: окрашивание потолков,
+								поклейка обоев на стены</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about-company">
+				<div class="container">
+					<div class="wrapper__about-company">
+						<div class="about-company__text">
+							<h2 class="block__title">О компании</h2>
+							<p class="text__caption-1">Повседневная практика показывает, что постоянный количественный рост и сфера
+								нашей активности
+								способствует подготовке и реализации первоочередных требований.</p>
+							<p class="text__caption-2">Повседневная практика показывает, что постоянный количественный рост и сфера
+								нашей активности
+								способствует подготовке и реализации первоочередных требований. Идейные соображения высшего порядка, а
+								также экономическая повестка сегодняшнего дня прекрасно подходит для реализации кластеризации усилий.
+							</p>
+							<a class="link__more" href="#">Больше о нашей компании <img src="/img/icons/arrow-blue-right.svg"
+									alt=""></a>
+						</div>
+						<div class="about-company__image">
+							<img src="img/main/about-image.jpg" alt="Картинка работающего человека">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="block__bubbles">
+					<div class="wrapper__bubbles">
+						<h2 class="block__title">Почему клиенты выбирают нас <span>более 4256</span> отремонтированных помещений
+						</h2>
+						<div class="bubbles__container">
+							<div class="bubbles__item bubble-1">
+								<p>более</p>
+								<span>4256</span>
+								<p>
+									отремононтированных помещений по Москве и области
+								</p>
+							</div>
+							<div class="bubbles__item bubble-2">
+								<p>более</p>
+								<span>7856</span>
+								<p>
+									довольных клиентов
+								</p>
+							</div>
+							<div class="bubbles__item bubble-3">
+								<p>более</p>
+								<span>526</span>
+								<p>
+									рекомендаций от партнеров
+								</p>
+							</div>
+							<div class="bubbles__item bubble-4">
+								<p>более</p>
+								<span>17</span>
+								<p>
+									лет оптыа в проведении ремонтов
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block__form-question">
+					<h2 class="block__title">У вас остались вопросы ?</h2>
+					<p class="form-question__subtitle">
+						К Вашим услугам наши профессиональные сотрудники с большим опытом работы с интерьерами
+					</p>
+					<form class="form-question__row">
+						<div class="form-group__name">
+							<label for="id__name-user" class="label__name">Имя</label>
+							<div class="input-name">
+								<input class="user-name" type="text" id="id__name-user" placeholder="Андрей" required maxlength="18"
+									pattern="^[а-яёА-ЯЁ]+$">
+							</div>
+						</div>
+						<div class="form-group__tel">
+							<label for="id__tel" class="label__tel">Телефон</label>
+							<div class="input-tel icon-tell">
+								<input class="user-tel" type="tel" id="id__tel" placeholder="(ХХ)XXX-XX-XX" required
+									pattern="^\(\d{2}\)\d{3}-\d{2}-\d{2}$" minlength="12" maxlength="18">
+							</div>
+						</div>
+						<div class="form-group__btn">
+							<button type="submit" id="button1id" class="btn-success">Оставить заявку</button>
+						</div>
+					</form>
+					<p class="form-text__consent">Отправляю данную форму даю согласие на обработку персональных данных</p>
+				</div>
+				<div class="block__feedback">
+					<div class="feedback__header">
+						<div class="header-feedback__text">
+							<h2 class="block__title">Лучше всего о нас расскажут отзывы довольных клиентов</h2>
+							<p class="subtitle"><span>Более 526</span> рекомендаций от партнеров, и положительных отзывов наших
+								клиентов</p>
+						</div>
+						<div class="header-feedback__images">
+							<div class="ellipse"><img src="img/main/title-ellipse-1.svg" alt=""></div>
+							<div class="ellipse"><img src="img/main/title-ellipse-2.svg" alt=""></div>
+							<div class="ellipse"><img src="img/main/title-ellipse-3.svg" alt=""></div>
+							<div class="ellipse"><img src="img/main/title-ellipse-4.svg" alt=""></div>
+						</div>
+					</div>
+					<div class="feedback__body">
+						<div class="feedback__item">
+							<div class="wrapper__feedback-text">
+								<h3 class="feedback__title">Очень довольны ремонтом! Быстро и качественно.</h3>
+								<p class="feedback__text">Сделали ремонт по типовому проекту. Стоимость и сроки были прописаны в
+									договоре, все честно. Ремонт
+									сделали на совесть, но со сроками подзадержались. Квартиру сдавали чистой, самый едкий строительный
+									белый налет вымыли, чем очень облегчили участь супруге перед переездо.</p>
+								<ul class="list__client">
+									<li class="client__item">
+										<h4 class="client__name">Святослав Воробейников</h4>
+										<p class="client__data">22 июня 2022</p>
+									</li>
+								</ul>
+							</div>
+							<div class="item__feedback-image">
+								<img src="img/main/feedback-image-1.jpg" alt="Фото-отзыв отремонированной квартиры">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block__articles">
+					<div class="articles__header">
+						<h2 class="block__title">Полезные статьи</h2>
+						<p class="subtitle">Свежие новости компании, последние публикации и полезные статьи о ремонте</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container footer">
+				<div class="footer__logo">
+					<img src="img/footer-logo.svg" alt="">
+					<span>2023 &#169; Все права защищены</span>
+					<a href="#">Политика конфидециальности</a>
+				</div>
+				<div class="footer__navigation service">
+					<h3>Услуги</h3>
+					<ul>
+						<li><a href="#">Косметический ремонт</a></li>
+						<li><a href="#">Капитальный ремонт</a></li>
+						<li><a href="#">Евро ремонт</a></li>
+						<li><a href="#">Дизайн интерьера</a></li>
+						<li><a href="#">Ремонт под ключ</a></li>
+					</ul>
+				</div>
+				<div class="footer__navigation clients">
+					<h3>Клиентам</h3>
+					<ul>
+						<li><a href="#">Блог</a></li>
+						<li><a href="#">Портфолио</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer__contacts">
+					<span>+7 (985) 123-456-78</span>
+					<a class="call-me" href="tel:798512345678"><span>Перезвоните мне</span></a>
+					<a class="link__sign" href="#">Записаться на замер</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

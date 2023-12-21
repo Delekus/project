@@ -1,0 +1,1416 @@
+		/*Обнуление отступов*/
+		*,
+		h1,
+		h2,
+		h3,
+		p,
+		ul,
+		li {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			height: 100%;
+			font-size: 15px;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+
+		body {
+			font-family: 'Comfortaa', sans-serif;
+		}
+
+		:root {
+			--main-font-size: 15px;
+		}
+
+		.wrapper {
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		main {
+			flex: 1 1 auto;
+		}
+
+		/*Обертка для ограничения максимальной ширины контейнера*/
+		.container {
+			width: 100%;
+			max-width: 1280px;
+			margin: 24px auto;
+		}
+
+		/*Класс модификатор для хэдера*/
+		.header {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			position: relative;
+		}
+
+		.header__menu {
+			/*Разрешаем блоку с навигацией занимать все доступное место*/
+			flex: 1 1 auto;
+		}
+
+		.header__menu ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.header__menu a {
+			padding: 8px 10px;
+			font-size: 0.95rem;
+		}
+
+		.header__menu a:hover {
+			color: rgba(237, 20, 91, 1);
+		}
+
+		.header__menu a:active {
+			color: rgba(119, 140, 235, 0.4);
+		}
+
+		/*Стили для блока с выбором города номером телефона*/
+		.header__info {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+
+		/*Выпадающие меню с городами*/
+		.info__city {
+			margin: 0 2rem;
+			position: relative;
+		}
+
+		.city {
+			font-family: 'Comfortaa', sans-serif;
+			outline: none;
+			border: none;
+		}
+
+		/*Добавление иконки города*/
+		.info__city::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			left: -25px;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			background-image: url(../img/header_icon-map-point.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 20px;
+			height: 20px;
+		}
+
+		.info__tel {
+			margin: 0 2rem;
+			position: relative;
+		}
+
+		/*Добавление иконки телефон*/
+		.info__tel::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			left: -30px;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			background-image: url(../img/header_icon-call.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 24px;
+			height: 24px;
+		}
+
+		/*"Подвал"*/
+		footer {
+			background-color: rgba(119, 140, 235, 0.4);
+			padding: 60px 0;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		/*Стили для блока с логотипом и подписью к нему*/
+		.footer__logo {
+			color: rgba(130, 130, 130, 1);
+		}
+
+		.footer__logo img {
+			margin: 0 auto;
+			display: block;
+			margin-bottom: 1.5rem;
+		}
+
+		.footer__logo span {
+			display: block;
+			text-align: center;
+			font-size: 0.75rem;
+			line-height: 18px;
+		}
+
+		.footer__logo a {
+			text-align: center;
+			font-size: 0.75rem;
+			line-height: 18px;
+			text-decoration: underline;
+			color: rgba(130, 130, 130, 1);
+		}
+
+		/*Стили для навигации футера*/
+		.footer__navigation h3 {
+			margin-bottom: 1.5rem;
+			color: rgba(24, 10, 83, 1);
+		}
+
+		.footer__navigation ul {
+			list-style: none;
+			color: rgba(79, 79, 79, 1);
+		}
+
+		.footer__navigation li {
+			margin-bottom: 18px;
+		}
+
+		.footer__navigation li:last-child {
+			margin-bottom: 0;
+		}
+
+
+		.footer__navigation a {
+			position: relative;
+		}
+
+		/*Стили для появлящегося подчеркивания ссылки при наведении*/
+		.footer__navigation a::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -2px;
+			width: 0;
+			height: 2px;
+			background-color: rgba(237, 20, 91, 1);
+			transition: width 0.35s;
+		}
+
+		.footer__navigation a:hover::before {
+			width: 100%;
+		}
+
+		/*Блок футера с номером телефона и кнопкой записи*/
+		.footer__contacts {
+			color: rgba(24, 10, 83, 1);
+			text-align: right;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.footer__contacts>span {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.25rem;
+			font-weight: 600;
+			display: block;
+			text-align: right;
+			position: relative;
+		}
+
+		/*Иконка телефона*/
+		.footer__contacts>span::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 70%;
+			margin: auto 0;
+			width: 36px;
+			height: 36px;
+			background-color: rgba(119, 140, 235, 1);
+			background-image: url(../img/call-me.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 70%;
+			border-radius: 50%;
+		}
+
+		.call-me {
+			display: block;
+			margin-bottom: 1.5rem;
+		}
+
+		.call-me span {
+			border-bottom: 1px rgba(119, 140, 235, 1) dotted;
+		}
+
+		.call-me:hover {
+			color: rgba(237, 20, 91, 1);
+		}
+
+		/*Ссылка Записаться на замер*/
+		.link__sign {
+			display: inline-block;
+			text-transform: uppercase;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 0.9rem;
+			font-weight: 800;
+			color: #fff;
+			text-align: center;
+			padding: 30px;
+			padding-right: 73px;
+			background-color: rgba(237, 20, 91, 1);
+			border-radius: 60px;
+			position: relative;
+		}
+
+		.link__sign::after {
+			content: "";
+			display: inline-block;
+			background-image: url(../img/footer-sign.svg);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 30px;
+			margin: auto 0;
+			width: 25px;
+			height: 24px;
+		}
+
+		.link__sign:hover {
+			color: rgba(24, 10, 83, 1);
+		}
+
+		.link__sign:active {
+			transform: scale(95%);
+		}
+
+		/**/
+		.block__banners {
+			max-height: 552px;
+			display: grid;
+			gap: 20px 20px;
+			grid-template-columns: repeat(4, minmax(305px, 1fr));
+			grid-template-rows: repeat(2, minmax(262px, 1fr));
+			grid-template-areas:
+				"banner_text banner_text banner_horiz banner_horiz"
+				"banner_text banner_text banner_sqaure-left banner_sqaure-right";
+			margin-bottom: 100px;
+		}
+
+		.block__banners>div {
+			border-radius: 40px;
+		}
+
+		/*Блок с кнопкой Записаться на замер*/
+		.banners__text {
+			padding: 55px 30px;
+			grid-area: banner_text;
+			border-radius: 40px;
+			background-image: url(../img/main/Group.svg);
+			background-repeat: no-repeat;
+			background-position: 100% 100%;
+		}
+
+		.banners__text h3 {
+			font-size: 2.55rem;
+			margin-bottom: 20px;
+		}
+
+		.banners__text p {
+			color: rgba(79, 79, 79, 1);
+			line-height: 28px;
+		}
+
+		.banners__text a {
+			width: 55%;
+			margin-top: 2.4rem;
+		}
+
+		/*Блок с кнопкой Подробнее*/
+		.banners__square_horizontal {
+			grid-area: banner_horiz;
+			background-color: rgba(119, 140, 235, 0.9);
+			background-image: url(../img/main/portrait-young-male-interior-designer-engineer-smiling-while-sitting-his-office-table-removebg-preview\ 1.png);
+			background-repeat: no-repeat;
+			background-position: 100% 100%;
+			padding: 45px 30px;
+			color: #fff;
+			font-size: 1.3rem;
+			line-height: 32px;
+		}
+
+		.banners__square_horizontal p {
+			margin-bottom: 40px;
+			width: 70%;
+		}
+
+		.banners__square_horizontal span {
+			font-size: 3.5rem;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 800;
+			color: rgba(255, 178, 125, 1);
+
+		}
+
+		/*Ссылка Подробнее*/
+		.link__more-percent {
+			font-family: 'Montserrat', sans-serif;
+			text-transform: uppercase;
+			border-radius: 60px;
+			background-color: #fff;
+			padding: 20px;
+			padding-right: 67px;
+			font-size: 1rem;
+			font-weight: 700;
+			position: relative;
+			top: -12px;
+			margin-right: 1rem;
+		}
+
+		.link__more-percent:hover {
+			background-color: rgba(255, 178, 125, 1);
+			color: #fff;
+		}
+
+		.link__more-percent:active {
+			transform: scale(95%);
+		}
+
+		.link__more-percent::after {
+			content: "";
+			display: block;
+			position: absolute;
+			background-image: url(../img/main/percent.svg), url(../img/main/Ellipse-orange.svg);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			top: 0;
+			bottom: 0;
+			right: 14px;
+			margin: auto 0;
+			width: 34px;
+			height: 34px;
+		}
+
+		.banners__square_left {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			grid-area: banner_sqaure-left;
+			background-image: url(../img/main/a6b58dbb7b93ba572a7a1f823ab7b011.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 20px;
+
+		}
+
+		.banners__square_left h3 {
+			color: #fff;
+			font-weight: 700;
+			font-size: 1.8rem;
+			line-height: 34px;
+			margin-bottom: 10px;
+		}
+
+		.banners__square_left p {
+			color: #000;
+			font-weight: 500;
+			font-size: 1rem;
+		}
+
+		.banners__square_right {
+			grid-area: banner_sqaure-right;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+			background-image: url(../img/main/4599dc194ca3247aa946840cbde77aca.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 30px;
+		}
+
+		.banners__square_right h3 {
+			text-align: right;
+			font-size: 2rem;
+			font-weight: 700;
+			line-height: 38px;
+		}
+
+		.banners__square_right p {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 800;
+			font-size: 3.35rem;
+			color: rgba(119, 140, 235, 1);
+		}
+
+		.block__out-projects {
+			margin-bottom: 50px;
+		}
+
+		/*Заголовок блока Наши проекты*/
+		.slide-block__line-text {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 50px;
+		}
+
+		/*Класс модификатор для заголовков H2*/
+		.block__title {
+			font-weight: 700;
+			font-size: 2.8rem;
+			margin: 0;
+			padding: 0;
+		}
+
+		/*Стили для цифр*/
+		.slide-block__line-text span {
+			font-weight: 700;
+			font-size: 3.4rem;
+			color: rgba(119, 140, 235, 1);
+			margin-right: 24px;
+		}
+
+		.slide-block__line-text p {
+			display: inline-block;
+			font-weight: 700;
+			font-size: 1rem;
+		}
+
+		/*Обертка для достижений (цифр и подписей)*/
+		.wrapper__achievement {
+			display: flex;
+			align-items: center;
+		}
+
+		/*Блок со слайдами проектов*/
+		.slide-block {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(410px, 1fr));
+			grid-template-rows: repeat(2, minmax(500px, 1fr));
+			grid-template-areas:
+				"big-slide big-slide big-slide"
+				"small-slide medium-slide medium-slide";
+			gap: 20px;
+			margin-bottom: 50px;
+		}
+
+		.slide__item {
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 40px;
+			position: relative;
+		}
+
+		.big-slide {
+			grid-area: big-slide;
+			background-image: url(../img/main/big-slide.png);
+		}
+
+		.circle {
+			width: 74px;
+			height: 74px;
+			background-color: #8DC63F;
+			border-radius: 50%;
+			text-align: center;
+			position: relative;
+			margin-left: auto;
+			margin-right: 0em;
+			top: 30px;
+			right: 30px;
+			color: #fff;
+		}
+
+		.circle p {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			white-space: nowrap;
+			font-size: 0.9rem;
+		}
+
+		.circle p span {
+			font-weight: 700;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.circle_blue {
+			background-color: rgba(119, 140, 235, 1);
+		}
+
+		.small-slide {
+			grid-area: small-slide;
+			background-image: url(../img/main/small-slide.png);
+		}
+
+		.medium-slide {
+			grid-area: medium-slide;
+			background-image: url(../img/main/medium-slide.png);
+		}
+
+		.slide__selector {
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+
+		.selector__list {
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			gap: 5px;
+		}
+
+		.list__item {
+			width: 50px;
+			height: 5px;
+			border-radius: 6px;
+			background-color: #fff;
+		}
+
+		.list__item_active-green {
+			background-color: rgba(141, 198, 63, 1);
+		}
+
+		.list__item_active-blue {
+			background-color: rgba(119, 140, 235, 1);
+		}
+
+		.btn__look-more {
+			background-color: rgba(119, 140, 235, 1);
+			outline: none;
+			border: none;
+			border-radius: 60px;
+			padding: 16px 20px;
+			padding-right: 68px;
+			position: relative;
+			left: 50%;
+			transform: translate(-50%, 0);
+			font-weight: 700;
+			font-family: 'Montserrat', sans-serif;
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+
+		.btn__look-more::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			transform: translate(0, -50%);
+			background-image: url(../img/main/look-more.svg);
+			display: inline-block;
+			width: 34px;
+			height: 34px;
+		}
+
+		.btn__look-more:hover {
+			transform: translate(-50%, 0) scale(1.2);
+		}
+
+		.btn__look-more:active::after {
+			transform: translate(0, -50%) translateY(5px);
+		}
+
+		/*Блок Мы предлагаем*/
+		.block__offer {
+			margin-bottom: 100px;
+		}
+
+		.offer__title {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.title__text {
+			margin-bottom: 60px;
+		}
+
+		.title__text h2 {
+			margin-bottom: 1rem;
+		}
+
+		.title__text p {
+			font-size: 1rem;
+		}
+
+		.title__text span {
+			color: rgba(119, 140, 235, 1);
+		}
+
+		.title__images {
+			position: relative;
+		}
+
+		.ellipse {
+			display: inline-block;
+			position: absolute;
+		}
+
+		.ellipse:nth-child(4) {
+			top: 0;
+			right: 0;
+			z-index: 1;
+		}
+
+		.ellipse:nth-child(3) {
+			top: 0;
+			right: 74px;
+			z-index: 2;
+		}
+
+		.ellipse:nth-child(2) {
+			top: 0;
+			right: 148px;
+			z-index: 3;
+		}
+
+		.ellipse:nth-child(1) {
+			top: 0;
+			right: 222px;
+			z-index: 4;
+		}
+
+		/*Карточки блока Мы предлагаем */
+		.offer__pics {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+			grid-auto-rows: 331px;
+			grid-auto-flow: dense;
+			gap: 20px;
+		}
+
+		.pics__item {
+			border-radius: 40px;
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
+			position: relative;
+			background-repeat: no-repeat;
+			background-position: bottom right;
+		}
+
+		.pics__item:first-child {
+			grid-column: 3/1;
+		}
+
+		.pics__item:last-child {
+			grid-column: -1/-3;
+		}
+
+		.pics__item-1 {
+			background-color: rgba(255, 235, 235, 1);
+			background-image: url(../img/main/pics_item-1.svg);
+		}
+
+		.pics__item-2 {
+			background-color: rgba(228, 233, 255, 1);
+			background-image: url(../img/main/pics_item-2.svg);
+		}
+
+		.pics__item-3 {
+			background-color: rgba(238, 255, 215, 1);
+			background-image: url(../img/main/pics_item-3.svg);
+		}
+
+		.pics__item-4 {
+			background-color: rgba(253, 233, 210, 1);
+			background-image: url(../img/main/pics_item-4.svg);
+		}
+
+		.item__title {
+			font-size: 2.1rem;
+			font-weight: 700;
+			margin: 1rem 0 0.7rem 0;
+		}
+
+		.item__text {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 16px;
+			width: 360px;
+		}
+
+		.item__link {
+			position: absolute;
+			bottom: 2rem;
+			border-radius: 50%;
+		}
+
+		.item__link:hover {
+			-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+			-moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+			box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+		}
+
+		.item__link:active {
+			transform: translateX(5px);
+		}
+
+		/*Блок с рассчетом стоимости*/
+		.block__calculation {
+			margin-bottom: 100px;
+		}
+
+		.calculation__head {
+			text-align: center;
+			margin-bottom: 4rem;
+		}
+
+		.block__calculation .block__title {
+			margin-bottom: 1.33rem;
+		}
+
+		.block__title span {
+			color: rgba(119, 140, 235, 1);
+		}
+
+		.calculation__head .subtitle {
+			margin-bottom: 2.66rem;
+			max-width: 750px;
+			margin: 0 auto;
+		}
+
+		.subtitle {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.07rem;
+		}
+
+		.subtitle>span {
+			color: rgba(119, 140, 235, 1);
+		}
+
+		.range__area {
+			max-width: 615px;
+			width: 100%;
+			height: 50px;
+		}
+
+		.calculation__cards {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 20px;
+			margin-bottom: 4rem;
+		}
+
+		.cards__item {
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 2rem;
+			border-radius: 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			position: relative;
+			min-height: 360px;
+			flex: 1 1 23%;
+		}
+
+		/*Стили для ряда с карточками*/
+		/*.calculation__cards {
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+			margin-bottom: 4rem;
+		}
+
+		.cards__item {
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 2rem;
+			border-radius: 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-start;
+			position: relative;
+			width: 25%;
+			max-width: 305px;
+			min-width: 210px;
+			float: left;
+		}
+
+		.cards__item::before {
+			content: "";
+			padding-top: 100%;
+			float: left;
+		}
+
+		.cards__item::after {
+			content: "";
+			display: block;
+			clear: both;
+		}*/
+
+		.cards__item-1 {
+			background-image: url(../img/main/card-image-1.png);
+		}
+
+		.cards__item-2 {
+			background-image: url(../img/main/card-image-2.png);
+		}
+
+		.cards__item-3 {
+			background-image: url(../img/main/card-image-3.png);
+		}
+
+		.cards__item-4 {
+			background-image: url(../img/main/card-image-4.png);
+		}
+
+		.cards__item p {
+			font-size: 1.6rem;
+			color: #fff;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+		.cards__item a {
+			padding: 5px 10px;
+			color: #fff;
+			background-color: rgba(119, 140, 235, 1);
+			border-radius: 60px;
+		}
+
+		.cards__item a:hover {
+			transform: scale(1.1);
+		}
+
+		.cards__item a:active {
+			box-shadow: inset 0px 0px 15px 2px #000000;
+		}
+
+		.test {
+			height: 400px;
+			border: 1px solid black;
+			display: flex;
+			flex-direction: row;
+		}
+
+		.calculation__selecting {
+			display: flex;
+			flex-direction: row;
+			height: 400px;
+			background-color: rgba(246, 250, 255, 1);
+			border-radius: 40px 0 0 40px;
+		}
+
+		.selecting__tabs {
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			position: relative;
+			padding: 30px;
+		}
+
+		.tabs__input {
+			opacity: 0;
+			position: absolute;
+		}
+
+		.tab__input-1:checked~.tab__content-1,
+		.tab__input-2:checked~.tab__content-2,
+		.tab__input-3:checked~.tab__content-3 {
+			display: block;
+		}
+
+		.tab__input-1:checked~.tab__name-1,
+		.tab__input-2:checked~.tab__name-2,
+		.tab__input-3:checked~.tab__name-3 {
+			background: none;
+			color: rgba(119, 140, 235, 1);
+		}
+
+		/*Названия вкладок*/
+		.tabs__name {
+			flex-basis: 33.333333%;
+			font-size: 1.15rem;
+			color: rgba(193, 204, 251, 1);
+			border-bottom: 1px rgba(119, 140, 235, 1) dotted;
+			max-height: 60px;
+			white-space: nowrap;
+		}
+
+		/*Содержимое вкладок*/
+		.tabs__content {
+			display: none;
+			font-family: 'Montserrat', sans-serif;
+			width: 100%;
+			position: relative;
+		}
+
+		/*Кнопки подробнее*/
+		.link__more {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-family: 'Montserrat', sans-serif;
+			text-transform: uppercase;
+			border-radius: 60px;
+			background-color: #fff;
+			padding: 20px;
+			font-size: 1rem;
+			font-weight: 700;
+		}
+
+		.link__more:hover {
+			background-color: rgba(119, 140, 235, 1);
+			color: #fff;
+		}
+
+		.link__more:active {
+			transform: scale(0.9);
+		}
+
+		.link__more img {
+			padding-left: 10px;
+			vertical-align: middle;
+		}
+
+		.selecting__price {
+			flex: 0 0 31.5%;
+			background-color: rgba(119, 140, 235, 1);
+			border-radius: 0 40px 40px 0;
+			padding: 30px;
+			color: #fff;
+		}
+
+		.selecting__price h4 {
+			font-size: 1.85rem;
+			margin-bottom: 1.2rem;
+		}
+
+		.selecting__price p {
+			font-size: 1.2rem;
+			margin-bottom: 0.8rem;
+		}
+
+		.selecting__price p>span {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.1rem;
+		}
+
+		.selecting__price .price__total {
+			font-size: 1.45rem;
+			margin: 20px 0 50px 0;
+		}
+
+		.selecting__price .price__total span {
+			font-size: 1.2rem;
+		}
+
+		.benefits {
+			text-align: center;
+		}
+
+		.benefits .block__title {}
+
+		.benefits .subtitle {
+			margin-bottom: 4rem;
+		}
+
+		.benefits__cards {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 20px;
+			margin-bottom: 4rem;
+		}
+
+		.benefit-cards__item {
+			text-align: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 2rem;
+			border-radius: 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-start;
+			position: relative;
+			flex: 1 1 23%;
+		}
+
+		.card__image {
+			margin-bottom: 10px;
+		}
+
+		.card__title {
+			font-size: 1.4rem;
+			flex-basis: 60px;
+		}
+
+		.card__subtitle {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.benefit-card__item-1 {
+			background-color: rgba(238, 253, 215, 1);
+			background-image: url(../img/main/bgc-benefit-item-1.svg);
+			background-position: 100% 100%;
+		}
+
+		.benefit-card__item-2 {
+			background-color: rgba(253, 233, 210, 1);
+			background-image: url(../img/main/bgc-benefit-item-2.svg);
+			background-position: 0 0;
+		}
+
+		.benefit-card__item-3 {
+			background-color: rgba(228, 233, 255, 1);
+			background-image: url(../img/main/bgc-benefit-item-3.svg);
+			background-position: 100% 50%;
+		}
+
+		.benefit-card__item-4 {
+			background-color: rgba(228, 233, 255, 1);
+		}
+
+		/*Блок О компании*/
+		.about-company {
+			background-color: rgba(246, 250, 255, 1);
+			border-radius: 60px;
+			margin-bottom: 100px;
+		}
+
+		.wrapper__about-company {
+			display: flex;
+			gap: 60px;
+			padding: 50px 0;
+		}
+
+		.about-company__text {
+			position: relative;
+		}
+
+		.block__title {}
+
+		.text__caption-1 {
+			font-size: 1.133rem;
+			margin-bottom: 1.2rem;
+		}
+
+		.text__caption-2 {
+			font-size: var(--main-font-size);
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.link__more {}
+
+		.about-company__image {}
+
+		.about-company__image img {
+			border-radius: 40px;
+		}
+
+		/*Блок с пузырями*/
+		.block__bubbles {
+			margin-bottom: 100px;
+		}
+
+		.wrapper__bubbles {
+			text-align: center;
+		}
+
+		.block__title {}
+
+		.bubbles__container {
+			display: flex;
+			height: 300px;
+			justify-content: space-evenly;
+		}
+
+		.bubbles__item {
+			width: 200px;
+			height: 200px;
+			padding: 15px;
+			border-radius: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.bubbles__item p {
+			font-family: 'Montserrat', sans-serif;
+			font-size: calc(var(--main-font-size)*0.8);
+			color: #fff;
+			text-transform: uppercase;
+			word-wrap: break-word;
+		}
+
+		.bubbles__item span {
+			font-family: 'Montserrat', sans-serif;
+			color: #fff;
+			font-weight: 700;
+			font-size: calc(var(--main-font-size)*2.53);
+		}
+
+		.bubble-1 {
+			background-color: rgba(237, 20, 91, 1);
+			align-self: flex-end;
+		}
+
+		.bubble-2 {
+			background-color: rgba(119, 140, 235, 1);
+		}
+
+		.bubble-3 {
+			background-color: rgba(255, 178, 125, 1);
+			align-self: flex-end;
+		}
+
+		.bubble-4 {
+			background-color: rgba(141, 198, 63, 1);
+		}
+
+		/*Блок с отправкой заявки*/
+		.block__form-question {
+			background-color: rgba(228, 233, 255, 1);
+			border-radius: 40px;
+			padding: 70px 50px;
+			background-image: url(../img/main/smiling-successful-female-asian-industrial-engineer-factory-manager-safety-helmet-business-suit-using-laptop-computer-checking-with-project-blueprints-screen\ 2_adobe_express\ 1.png), url(../img/main/shovels.svg);
+			background-repeat: no-repeat;
+			background-position: right;
+			margin-bottom: 100px;
+		}
+
+		.block__title {}
+
+		.form-question__subtitle {
+			font-family: 'Montserrat', sans-serif;
+			font-size: calc(1.07 * var(--main-font-size));
+			font-weight: 500;
+			color: #000;
+			width: 480px;
+			margin-bottom: 35px;
+		}
+
+		.form-question__row {
+			display: flex;
+			align-items: flex-end;
+			gap: 25px;
+			margin-bottom: 1.2rem;
+		}
+
+		.form-group__name {}
+
+		.label__name {
+			text-transform: uppercase;
+		}
+
+		.input-name {
+			margin-top: 0.8rem;
+		}
+
+		.user-name {
+			width: 300px;
+			height: 60px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.1rem;
+			color: rgba(153, 168, 237, 1);
+			padding: 16px 25px;
+			border: none;
+		}
+
+		/*Стили цветов форм при валидности*/
+		.user-name:focus {
+			background-color: rgba(119, 140, 235, 0.1);
+		}
+
+		.user-name:invalid:not(:placeholder-shown) {
+			background-color: rgba(237, 20, 91, 0.1);
+		}
+
+		.user-name:focus:valid {
+			background-color: rgba(141, 198, 63, 0.1);
+		}
+
+		.form-group__tel {}
+
+		.label__tel {
+			text-transform: uppercase;
+		}
+
+		.input-tel {
+			margin-top: 0.8rem;
+		}
+
+		.icon-tell {
+			position: relative;
+		}
+
+		.icon-tell::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			transform: translate(0, -50%);
+			background-image: url(../img/icons/phone-red.svg);
+			display: block;
+			width: 32px;
+			height: 32px;
+		}
+
+		.user-tel {
+			width: 300px;
+			height: 60px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.1rem;
+			color: rgba(153, 168, 237, 1);
+			padding: 16px 25px;
+			border: none;
+		}
+
+		/*Стили цветов форм при валидности*/
+		.user-tel:focus {
+			background-color: rgba(119, 140, 235, 0.1);
+		}
+
+		.user-tel:invalid:not(:placeholder-shown) {
+			background-color: rgba(237, 20, 91, 0.1);
+		}
+
+		.user-tel:focus:valid {
+			background-color: rgba(141, 198, 63, 0.1);
+		}
+
+		.form-group__btn {}
+
+		.btn-success {
+			background-color: rgba(237, 20, 91, 1);
+			padding: 25px 36px;
+			border-radius: 60px;
+			font-family: 'Montserrat', sans-serif;
+			color: #fff;
+			font-weight: 700;
+			border: none;
+		}
+
+		.form-text__consent {
+			font-family: 'Montserrat', sans-serif;
+			font-size: calc(var(--main-font-size)*0.8);
+			color: rgba(159, 159, 159, 1);
+		}
+
+		/*Блок с отзывами*/
+		.feedback__header {
+			display: flex;
+			position: relative;
+			margin-bottom: 50px;
+		}
+
+		.header-feedback__text {
+			flex: 0 1 700px;
+			font-size: 15px;
+		}
+
+		.header-feedback__images {
+			flex: 0 1 400px;
+		}
+
+		.header-feedback__images>.ellipse {
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+
+		/*Карточка отзыва*/
+		.feedback__body {
+			margin-bottom: 100px;
+		}
+
+
+		.feedback__item {
+			max-width: 955px;
+			display: flex;
+			border-radius: 40px;
+			background-color: rgba(246, 250, 255, 1);
+		}
+
+		.wrapper__feedback-text {
+			flex: 1 1 60%;
+			display: flex;
+			flex-direction: column;
+			padding: 40px;
+		}
+		.feedback__title {
+			font-weight: 700;
+			font-size: 1.46rem;
+			line-height: 32px;
+			max-width: 350px;
+			margin-bottom: 10px;
+		}
+
+		.feedback__text {
+			font-family: 'Montserrat', sans-serif;
+			line-height: 26px;
+			margin-bottom: 2rem;
+		}
+
+		.list__client {
+			list-style: none;
+		}
+
+		.client__item {
+			background: url(../img/icons/feedback-client-icon.svg) no-repeat left 0px;
+			padding: 10px 0 10px 70px;
+		}
+
+
+		.client__name {}
+
+		.client__data {
+			color: rgba(130, 130, 130, 1);
+			font-weight: 600;
+		}
+
+		.item__feedback-image {
+			grid-area: image;
+
+		}
+
+		.item__feedback-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0 40px 40px 0;
+		}
+
+		/*Блок статей*/
+		.articles__header {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.block__title {
+			line-height: 52px;
+		}
+		.subtitle {
+			flex: 0 1 460px;
+		}
